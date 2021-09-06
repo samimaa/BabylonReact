@@ -1,10 +1,8 @@
 import React from "react";
 import * as BABYLON from 'babylonjs';
-
 import '@babylonjs/loaders';
 import { NodeEditor } from '@babylonjs/node-editor';
 import '../styles/cta4xsb.css';
-
 export default function Editor() {
 
   var snippetUrl = "https://snippet.babylonjs.com";
