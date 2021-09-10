@@ -1,5 +1,5 @@
 import React from "react";
-import * as BABYLON from 'babylonjs';
+import * as BABYLON from '@babylonjs/core';
 import '@babylonjs/loaders';
 import { NodeEditor } from '@babylonjs/node-editor';
 import '../styles/cta4xsb.css';

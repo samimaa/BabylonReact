@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babylonjs/core": "^5.0.0-alpha.43",
+    "@babylonjs/loaders": "^5.0.0-alpha.43",
+    "@babylonjs/node-editor": "^5.0.0-alpha.43",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
