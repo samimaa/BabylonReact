@@ -1,5 +1,5 @@
 import React from "react";
-import * as BABYLON from '@babylonjs/core';
+import * as MYBABY from '@babylonjs/core';
 import '@babylonjs/loaders';
 import { NodeEditor } from '@babylonjs/node-editor';
 import '../styles/cta4xsb.css';
@@ -10,7 +10,7 @@ export default function Editor() {
   var previousHash = "";
   var nodeMaterial;
 
-  var customLoadObservable = new BABYLON.Observable();
+  var customLoadObservable = new MYBABY.Observable();
   var editorDisplayed = false;
 
 
@@ -121,31 +121,31 @@ export default function Editor() {
   }
 
   // Let's start
-  if (BABYLON.Engine.isSupported()) {
+  if (MYBABY.Engine.isSupported()) {
     var canvas = document.createElement("canvas");
-    var engine = new BABYLON.Engine(canvas, false, { disableWebGL2Support: false });
-    var scene = new BABYLON.Scene(engine);
-    var light0 = new BABYLON.HemisphericLight("light #0", new BABYLON.Vector3(0, 1, 0), scene);
-    var light1 = new BABYLON.HemisphericLight("light #1", new BABYLON.Vector3(0, 1, 0), scene);
-    var light2 = new BABYLON.HemisphericLight("light #2", new BABYLON.Vector3(0, 1, 0), scene);
+    var engine = new MYBABY.Engine(canvas, false, { disableWebGL2Support: false });
+    var scene = new MYBABY.Scene(engine);
+    var light0 = new MYBABY.HemisphericLight("light #0", new MYBABY.Vector3(0, 1, 0), scene);
+    var light1 = new MYBABY.HemisphericLight("light #1", new MYBABY.Vector3(0, 1, 0), scene);
+    var light2 = new MYBABY.HemisphericLight("light #2", new MYBABY.Vector3(0, 1, 0), scene);
 
-    nodeMaterial = new BABYLON.NodeMaterial("node");
+    nodeMaterial = new MYBABY.NodeMaterial("node");
 
     // Set to default
     if (!window.location.hash) {
-      const mode = BABYLON.DataStorage.ReadNumber("Mode", BABYLON.NodeMaterialModes.Material);
+      const mode = MYBABY.DataStorage.ReadNumber("Mode", MYBABY.NodeMaterialModes.Material);
 
       switch (mode) {
-        case BABYLON.NodeMaterialModes.Material:
+        case MYBABY.NodeMaterialModes.Material:
           nodeMaterial.setToDefault();
           break;
-        case BABYLON.NodeMaterialModes.PostProcess:
+        case MYBABY.NodeMaterialModes.PostProcess:
           nodeMaterial.setToDefaultPostProcess();
           break;
-        case BABYLON.NodeMaterialModes.Particle:
+        case MYBABY.NodeMaterialModes.Particle:
           nodeMaterial.setToDefaultParticle();
           break;
-        case BABYLON.NodeMaterialModes.ProceduralTexture:
+        case MYBABY.NodeMaterialModes.ProceduralTexture:
           nodeMaterial.setToDefaultProceduralTexture();
           break;
       }
