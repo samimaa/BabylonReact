@@ -73,6 +73,9 @@ export default function Editor() {
 
     var hostElement = document.getElementById("host-element");
     console.log(hostElement);
+    if (hostElement.children.length) {
+      return;
+    }
     NodeEditor.Show({
       nodeMaterial: nodeMaterial,
       hostElement: hostElement,
@@ -120,6 +123,7 @@ export default function Editor() {
     });
   }
 
+
   // Let's start
   if (MYBABY.Engine.isSupported()) {
     var canvas = document.createElement("canvas");
@@ -155,9 +159,13 @@ export default function Editor() {
       //   showEditor()
       // });
 
-        setTimeout(function () {
-          showEditor();
-        }, 1000)
+
+      setTimeout(function () {
+        showEditor();
+      }, 1000)
+
+
+
 
     }
   }
@@ -167,8 +175,8 @@ export default function Editor() {
 
   checkHash();
   return (
-    <div style={{width: "100%", height: "100%", padding: "0", margin: "0", overflow: "hidden"}}>
-      <div style={{width: "100%", height: "100%", padding: "0", margin: "0", overflow: "hidden"}} id="host-element"></div>
+    <div style={{ width: "100%", height: "100%", padding: "0", margin: "0", overflow: "hidden" }}>
+      <div style={{ width: "100%", height: "100%", padding: "0", margin: "0", overflow: "hidden" }} id="host-element"></div>
     </div>
 
   );
